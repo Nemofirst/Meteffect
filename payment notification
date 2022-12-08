@@ -1,0 +1,21 @@
+// Define a function to add a new transaction to the list
+function addTransaction(sender, recipient, amount) {
+  // Create a new transaction object with the specified sender, recipient, and amount
+  let transaction = {
+    sender: sender,
+    recipient: recipient,
+    amount: amount
+  };
+
+  // Add the new transaction to the list of transactions
+  transactions.push(transaction);
+
+  // Update the user's balance
+  balance += amount;
+
+  // Print a notification to the user
+  alert(`${sender} sent $${amount} to ${recipient}`);
+
+  // Print a message to the console to confirm that the transaction was added
+  console.log(`${sender} sent $${amount} to ${recipient}`);
+}
