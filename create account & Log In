@@ -1,0 +1,41 @@
+// Set up an array to store the list of user accounts
+let accounts = [];
+
+// Define a function to create a new user account
+function createAccount(username, password) {
+  // Check if an account with the specified username already exists
+  let existingAccount = accounts.find(account => account.username === username);
+
+  // If an account with the specified username already exists, print an error message and return
+  if (existingAccount) {
+    console.log(`Error: An account with the username "${username}" already exists`);
+    return;
+  }
+
+  // Create a new user account object with the specified username and password
+  let account = {
+    username: username,
+    password: password
+  };
+
+  // Add the new account to the list of accounts
+  accounts.push(account);
+
+  // Print a message to the console to confirm that the account was created
+  console.log(`Created a new account with the username "${username}"`);
+}
+
+// Define a function to log in to an existing user account
+function login(username, password) {
+  // Check if an account with the specified username and password exists
+  let account = accounts.find(account => account.username === username && account.password === password);
+
+  // If an account with the specified username and password exists, print a success message and return
+  if (account) {
+    console.log(`Successfully logged in to the account with the username "${username}"`);
+    return;
+  }
+
+  // If an account with the specified username and password does not exist, print an error message
+  console.log(`Error: No account with the username "${username}" and password "${password}" was found`);
+}
