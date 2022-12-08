@@ -1,0 +1,29 @@
+// Define an array to store the user's payment methods
+let paymentMethods = [];
+
+// Define a function to add a new payment method
+function addPaymentMethod(type, details) {
+  // Create a new payment method object with the specified type and details
+  let paymentMethod = {
+    type: type,
+    details: details
+  };
+
+  // Add the new payment method to the list of payment methods
+  paymentMethods.push(paymentMethod);
+
+  // Print a message to the console to confirm that the payment method was added
+  console.log(`Added a new ${type} payment method: ${details}`);
+}
+
+// Define a function to print the list of payment methods
+function printPaymentMethods() {
+  // Loop through the list of payment methods
+  for (let i = 0; i < paymentMethods.length; i++) {
+    // Get the current payment method
+    let paymentMethod = paymentMethods[i];
+
+    // Print a message to the console with the details of the payment method
+    console.log(`${paymentMethod.type}: ${paymentMethod.details}`);
+  }
+}
