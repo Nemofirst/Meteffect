@@ -1,0 +1,37 @@
+// Define an object to store the customer support resources
+let customerSupport = {
+  contact: 'support@paymentapp.com',
+  faqs: [
+    {
+      question: 'How do I add a payment method?',
+      answer: 'To add a payment method, go to the settings page and click on the "Payment Methods" tab. Then, click on the "Add Payment Method" button and follow the prompts to enter your payment information.'
+    },
+    {
+      question: 'How do I send a payment to someone?',
+      answer: 'To send a payment to someone, go to the home page and click on the "Send" button. Then, enter the recipient's username and the amount you want to send, and click on the "Send Payment" button to complete the transaction.'
+    },
+    {
+      question: 'How do I view my transaction history?',
+      answer: 'To view your transaction history, go to the home page and click on the "History" tab. This will display a list of all the transactions that you have sent or received.'
+    }
+  ]
+};
+
+// Define a function to print the customer support contact information
+function printContact() {
+  // Print the customer support contact information to the console
+  console.log(`Contact: ${customerSupport.contact}`);
+}
+
+// Define a function to print the list of FAQs
+function printFAQs() {
+  // Loop through the list of FAQs
+  for (let i = 0; i < customerSupport.faqs.length; i++) {
+    // Get the current FAQ
+    let faq = customerSupport.faqs[i];
+
+    // Print the question and answer for the FAQ to the console
+    console.log(`Q: ${faq.question}`);
+    console.log(`A: ${faq.answer}`);
+  }
+}
