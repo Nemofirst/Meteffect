@@ -1,0 +1,30 @@
+// Set up an array to store the list of transactions
+let transactions = [];
+
+// Define a function to add a new transaction to the list
+function addTransaction(sender, recipient, amount) {
+  // Create a new transaction object with the specified sender, recipient, and amount
+  let transaction = {
+    sender: sender,
+    recipient: recipient,
+    amount: amount
+  };
+
+  // Add the new transaction to the list of transactions
+  transactions.push(transaction);
+
+  // Print a message to the console to confirm that the transaction was added
+  console.log(`${sender} sent $${amount} to ${recipient}`);
+}
+
+// Define a function to print the list of transactions
+function printTransactions() {
+  // Loop through the list of transactions
+  for (let i = 0; i < transactions.length; i++) {
+    // Get the current transaction
+    let transaction = transactions[i];
+
+    // Print a message to the console with the details of the transaction
+    console.log(`${transaction.sender} sent $${transaction.amount} to ${transaction.recipient}`);
+  }
+}
